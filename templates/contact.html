@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Kontakt</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav class="navbar__wrapper">
+                <a class="navbar__logo" href="/">
+                    <img src="../assets/images/logo.svg" alt="liquid dražobná spoločnosť">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="material-icons">menu</span>
+                </button>
+                <div class="navbar__items-wrapper" id="navbar">
+                    <ul class="navbar__items">
+                        <li class="navbar__item">
+                            <a class="navbar__item-link navbar__item-link--active' }}" href="/">Domov</a>
+                        </li>
+                        <li class="navbar__item navbar__item--has-child">
+                            <a class="navbar__item-link" href="#"><span>Dražby</span><span class="material-icons navbar__auctions-chevron">expand_more</span></a>
+                            <ul class="navbar__item-child">
+                                <li class="navbar__item">
+                                    <a href="/" class="navbar__item-link">Aktuálna ponuka</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="/" class="navbar__item-link">Pripravované dražby</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item navbar__item--has-child">
+                            <a class="navbar__item-link" href="#"><span>Informácie</span><span class="material-icons navbar__info-chevron">expand_more</span></a>
+                            <ul class="navbar__item-child">
+                                <li class="navbar__item">
+                                    <a href="/" class="navbar__item-link">Pre veriteľov</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="/" class="navbar__item-link">Pre účastníkov dražby</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="/" class="navbar__item-link">Pre dlžníkov</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__item-link" href="/">O spoločmosti</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__item-link--active" href="/">Kontakt</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/" class="button--outlined">Prihlásiť sa</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="navbar__breadcrumbs">
+            <span>Domov</span><span>/</span><span class="navbar__breadcrumbs-current">Kontakt</span>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Kontakt</h1>
+        <div class="contact">
+            <div class="contact-details">
+                <h3>Spojte sa s nami</h3>
+                <div class="contact-details__location">
+                    <span class="material-icons">location_on</span>
+                    <div class="contact-details__location-text">
+                        <p>Dražby a reality PAMAŠA s.r.o.</p>
+                        <p>Kalvínske námestie 126/2</p>
+                        <p>Levice</p>
+                    </div>
+                </div>
+                <div class="contact-details__phone">
+                    <span class="material-icons">call</span>
+                    <a href="tel:+421915360193">+421 915 360 193</a>
+                </div>
+                <div class="contact-details__email">
+                    <span class="material-icons">mail</span>
+                    <a href="mailto:office@licitator.sk">office@licitator.sk</a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Kontaktný formulár</h3>
+                <form action="/" method="POST" class="contact-form__wrapper">
+                    <div class="contact-form__firstrow">
+                        <div class="contact-form__firt-name">
+                            <label for="first-name">Meno <span>*</span></label>
+                            <input type="text" id="first-name" name="first-name" placeholder="Váše meno" />
+                        </div>
+                        <div class="contact-form__last-name">
+                            <label for="last-name">Priezvisko <span>*</span></label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Váše priezvisko" />
+                        </div>
+                    </div>
+                    <label for="email">E-mail <span>*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Váš e-mail" />
+                    <label for="message">Správa <span>*</span></label>
+                    <textarea id="message" name="message" rows="5" placeholder="Vaša správa"></textarea>
+                    <button type="submit" class="button--primary">Odoslať</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__wrapper">
+            <a href="/" class="footer__logo">
+                <img src="../assets/images/footer_logo.svg" alt="liquid dražobná spoločnosť logo" />
+            </a>
+            <div class="footer__contact">
+                <h3>Kontakt</h3>
+                <div class="footer__contact-location-text">
+                    <p>Dražby a reality PAMAŠA s.r.o.</p>
+                    <p>Kalvínske námestie 126/2</p>
+                    <p>Levice</p>
+                </div>
+                <div class="footer__contact-details">
+                    <p><strong>Telefón:</strong><a href="tel:+421915360193">+421 915 360 193</a></p>
+                    <p><strong>E-mail:</strong><a href="mailto:s.agh@licitator.sk">s.agh@licitator.sk</a></p>
+                </div>
+                <button class="button--outlined">Kontaktujte nás</button>
+            </div>
+            <div class="footer__social-wrapper">
+                <a href="/" target="blank">
+                    <img src="../assets/images/instagramm.png" width="30px" height="30px" alt="instagram profil spoločnosti liquid" />
+                </a>
+                <a href="/" target="blank">
+                    <img src="../assets/images/facebook.png" width="30px" height="30px" alt="facebook profil spoločnosti liquid" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/scripts.js"></script>
+</body>
+</html>

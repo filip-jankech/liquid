@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Dražby</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav class="navbar__wrapper">
+                <a class="navbar__logo" href="/">
+                    <img src="../assets/images/logo.svg" alt="liquid dražobná spoločnosť">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="material-icons">menu</span>
+                </button>
+                <div class="navbar__items-wrapper" id="navbar">
+                    <ul class="navbar__items">
+                        <li class="navbar__item">
+                            <a class="navbar__item-link navbar__item-link--active' }}" href="/">Domov</a>
+                        </li>
+                        <li class="navbar__item navbar__item--has-child">
+                            <a class="navbar__item-link" href="#"><span>Dražby</span><span class="material-icons navbar__auctions-chevron">expand_more</span></a>
+                            <ul class="navbar__item-child">
+                                <li class="navbar__item">
+                                    <a href="/" class="navbar__item-link">Aktuálna ponuka</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="/" class="navbar__item-link">Pripravované dražby</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item navbar__item--has-child">
+                            <a class="navbar__item-link" href="#"><span>Informácie</span><span class="material-icons navbar__info-chevron">expand_more</span></a>
+                            <ul class="navbar__item-child">
+                                <li class="navbar__item">
+                                    <a href="/" class="navbar__item-link">Pre veriteľov</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="/" class="navbar__item-link">Pre účastníkov dražby</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="/" class="navbar__item-link">Pre dlžníkov</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__item-link" href="/">O spoločmosti</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__item-link--active" href="/">Kontakt</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/" class="button--outlined">Prihlásiť sa</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="navbar__breadcrumbs">
+            <span>Domov</span><span>/</span><span class="navbar__breadcrumbs-current">Kontakt</span>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Dražby</h1>
+        <div class="auctions">
+            <form class="side-form" action="/" method="get">
+                <div class="side-form__basic">
+                    <select name="auction-type-basic" id="auction-type-basic">
+                        <option value="" disabled selected>Vyberte typ</option>
+                        <option value="type1">Typ 1</option>
+                        <option value="type2">Typ 2</option>
+                        <option value="type3">Typ 3</option>
+                    </select>
+                    <select name="province-basic" id="province-basic">
+                        <option value="" disabled selected>Vyberte kraj</option>
+                        <option value="banskobystricky">Banskobystrický</option>
+                        <option value="bratislavsky">Bratislavský</option>
+                        <option value="kosicky">Košický</option>
+                        <option value="nitriansky">Nitriansky</option>
+                        <option value="trenciansky">Trenčiansky</option>
+                        <option value="trnavsky">Trnavský</option>
+                        <option value="presovsky">Prešovský</option>
+                        <option value="zilinsky">Žilinský</option>
+                    </select>
+                    <select name="condition" id="condition">
+                        <option value="" disabled selected>Vyberte stav</option>
+                        <option value="condition1">Stav 1</option>
+                        <option value="condition2">Stav 2</option>
+                        <option value="condition3">Stav 3</option>
+                    </select>
+                    <button type="submit" class="button--primary">Hľadať</button>
+                </div>
+                <div class="search-form__more-options">
+                    <p class="hidden"><span>+ </span>Viac možností</p>
+                    <p><span>- </span>Menej možností</p>
+                </div>
+                <!-- the display of the following div is toggled when user clicks on the div above (search-form__more-options) -->
+                <div class="side-form__advanced">
+                    <div class="side-form__advanced-first-row">
+                        <select name="auction-type-advanced" id="auction-type-advanced">
+                            <option value="" disabled selected>Vyberte typ</option>
+                            <option value="type1">Typ 1</option>
+                            <option value="type2">Typ 2</option>
+                            <option value="type3">Typ 3</option>
+                        </select>
+                        <select name="province-advanced" id="province-advanced">
+                            <option value="" disabled selected>Vyberte kraj</option>
+                            <option value="banskobystricky">Banskobystrický</option>
+                            <option value="bratislavsky">Bratislavský</option>
+                            <option value="kosicky">Košický</option>
+                            <option value="nitriansky">Nitriansky</option>
+                            <option value="trenciansky">Trenčiansky</option>
+                            <option value="trnavsky">Trnavský</option>
+                            <option value="presovsky">Prešovský</option>
+                            <option value="zilinsky">Žilinský</option>
+                        </select>
+                    </div>
+                    <div class="side-form__advanced-second-row">
+                        <input type="number" id="price-from" name="price-from" placeholder="Cena od €">
+                        <input type="number" id="price-to" name="price-to" placeholder="Cena do €">
+                        <input type="text" onfocus="(this.type='date')" id="date-from" name="date-from" placeholder="Dátum od">
+                        <input type="text" onfocus="(this.type='date')" id="date-to" name="date-to" placeholder="Dátum do">
+                        <select name="auction-round" id="auction-round">
+                            <option value="" disabled selected>Kolo dražby</option>
+                            <option value="round1">1. kolo</option>
+                            <option value="round2">2. kolo</option>
+                            <option value="round3">3. kolo</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <div class="search-results">
+                <div class="search-results__display-options">
+                    <select name="serach-results-selector" id="serach-results-selector">
+                        <option value="newest-first">Nasjkôr najnovšie</option>
+                        <option value="oldest-first">Nasjkôr najstaršie</option>
+                        <option value="cheapest-first">Nasjkôr najnižšia cena</option>
+                        <option value="most-expensive-first">Nasjkôr najvyššia cena</option>
+                    </select>
+                    <div class="search-results__view-toggle">
+                        <span class="material-icons">apps</span>
+                        <span class="material-icons search-results__view-toggle--active">format_list_bulleted</span>
+                    </div>
+                </div>
+                <div class="search-results__wrapper">
+                    <div class="search-results__card">
+                        <div class="search-results__image">
+                            <a href="/">
+                                <img src="https://www.archinfo.sk/image-handler/13268/5e18c1bb70707/site-icon/width_936/blnt-house-bratislava.jpg" alt="moderný dom" />
+                            </a>
+                        </div>
+                        <div class="search-results__info-and-price-wrapper">
+                            <div class="auction__type-chip">Byt</div>
+                            <div class="search-results__info-wrapper">
+                                <div>
+                                    <a href="/">
+                                        <h3>Byt v Dunajskej Strede</h3>
+                                    </a>
+                                    <div class="auction__info-location">Dunajská Streda, Dunajská Streda</div>
+                                </div>
+                                <div class="auction__info-details">
+                                    <div class="auction__auction-date">
+                                        <span class="material-icons">gavel</span> 28.06.2022
+                                    </div>
+                                    <div class="auction__auction-published">
+                                        <span class="material-icons">visibility</span> 17.06.2022
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-results__price-wrapper">
+                                <span>40 200,00 €</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-results__card">
+                        <div class="search-results__image">
+                            <a href="/">
+                                <img src="https://www.archinfo.sk/image-handler/13268/5e18c1bb70707/site-icon/width_936/blnt-house-bratislava.jpg" alt="moderný dom" />
+                            </a>
+                        </div>
+                        <div class="search-results__info-and-price-wrapper">
+                            <div class="auction__type-chip">Byt</div>
+                            <div class="search-results__info-wrapper">
+                                <div>
+                                    <a href="/">
+                                        <h3>Byt v Dunajskej Strede</h3>
+                                    </a>
+                                    <div class="auction__info-location">Dunajská Streda, Dunajská Streda</div>
+                                </div>
+                                <div class="auction__info-details">
+                                    <div class="auction__auction-date">
+                                        <span class="material-icons">gavel</span> 28.06.2022
+                                    </div>
+                                    <div class="auction__auction-published">
+                                        <span class="material-icons">visibility</span> 17.06.2022
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-results__price-wrapper">
+                                <span>40 200,00 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__wrapper">
+            <a href="/" class="footer__logo">
+                <img src="../assets/images/footer_logo.svg" alt="liquid dražobná spoločnosť logo" />
+            </a>
+            <div class="footer__contact">
+                <h3>Kontakt</h3>
+                <div class="footer__contact-location-text">
+                    <p>Dražby a reality PAMAŠA s.r.o.</p>
+                    <p>Kalvínske námestie 126/2</p>
+                    <p>Levice</p>
+                </div>
+                <div class="footer__contact-details">
+                    <p><strong>Telefón:</strong><a href="tel:+421915360193">+421 915 360 193</a></p>
+                    <p><strong>E-mail:</strong><a href="mailto:s.agh@licitator.sk">s.agh@licitator.sk</a></p>
+                </div>
+                <button class="button--outlined">Kontaktujte nás</button>
+            </div>
+            <div class="footer__social-wrapper">
+                <a href="/" target="blank">
+                    <img src="../assets/images/instagramm.png" width="30px" height="30px" alt="instagram profil spoločnosti liquid" />
+                </a>
+                <a href="/" target="blank">
+                    <img src="../assets/images/facebook.png" width="30px" height="30px" alt="facebook profil spoločnosti liquid" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/scripts.js"></script>
+</body>
+</html>
