@@ -598,18 +598,19 @@ footer .button--outlined:hover {
     margin: 34px auto;
 }
 
-.newest-auctions__wrapper {
+.auctions__wrapper.masonry {
     display: flex;
     flex-wrap: wrap;
     gap: 28px;
 }
 
-.newest-auctions__card {
+.masonry .auction__card {
     width: 31%;
     overflow: hidden;
+    position: relative;
 }
 
-.newest-auction__image {
+.masonry .auction__image {
     position: relative;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
@@ -619,7 +620,7 @@ footer .button--outlined:hover {
     overflow: hidden;
 }
 
-.newest-auction__image img {
+.masonry .auction__image img {
     width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -627,32 +628,32 @@ footer .button--outlined:hover {
     transition: all .2s ease;
 }
 
-.newest-auction__image img:hover {
+.masonry .auction__image img:hover {
     transform: scale(1.05);
 }
 
-.newest-auction__info-wrapper,
-.newest-auction__price-wrapper {
+.masonry .auction__info-wrapper,
+.masonry .auction__price-wrapper {
     padding: 16px;
     border-bottom: 2px solid var(--light-grey);
     border-left: 2px solid var(--light-grey);
     border-right: 2px solid var(--light-grey);
 }
 
-.newest-auction__info-wrapper h3 {
+.masonry .auction__info-wrapper h3 {
     transition: all 0.2s ease;
 }
 
-.newest-auction__info-wrapper h3:hover {
+.masonry .auction__info-wrapper h3:hover {
     color: var(--secondary-blue);
 }
 
-.newest-auction__price-wrapper {
+.masonry .auction__price-wrapper {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
-.newest-auction__price-wrapper span {
+.masonry .auction__price-wrapper span {
     font-size: 22px;
     font-weight: bold;
 }
@@ -686,6 +687,7 @@ footer .button--outlined:hover {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    z-index: 10;
 }
 
 .auction__type-chip {
@@ -697,8 +699,8 @@ footer .button--outlined:hover {
     font-size: 14px;
 }
 
-.newest-auction__image .auction_type-chip-wrapper {
-    top: 7%;
+.masonry .auction_type-chip-wrapper {
+    top: 3%;
     left: 7%;
     align-items: flex-start;
 }
@@ -711,7 +713,7 @@ footer .button--outlined:hover {
 }
 
 @media only screen and (max-width: 1095px) {
-    .newest-auctions__card {
+    .masonry .auction__card {
         width: 46%;
     }
 }
@@ -736,7 +738,7 @@ footer .button--outlined:hover {
 }
 
 @media only screen and (max-width: 649px) {
-    .newest-auctions__card {
+    .masonry .auction__card {
         width: 100%;
     }
 }
@@ -798,17 +800,18 @@ footer .button--outlined:hover {
     background-color: var(--white);
 }
 
-.search-results__wrapper {
+.auctions__wrapper.list {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.search-results__card {
+.list .auction__card {
     display: flex;
+    position: relative;
 }
 
-.search-results__image {
+.list .auction__image {
     width: 42%;
     border-top-left-radius: 18px;
     border-bottom-left-radius: 18px;
@@ -818,20 +821,20 @@ footer .button--outlined:hover {
     overflow: hidden;
 }
 
-.search-results__info-and-price-wrapper {
+.list .auction__info-and-price-wrapper {
     position: relative;
     width: 58%;
     display: flex;
     flex-direction: column;
 }
 
-.search-results__info-and-price-wrapper .auction_type-chip-wrapper {
+.list .auction_type-chip-wrapper {
     top: 22px;
     right: 25px;
     align-items: flex-end;
 }
 
-.search-results__image img {
+.list .auction__image img {
     width: 100%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -840,16 +843,16 @@ footer .button--outlined:hover {
     transition: all .2s ease;
 }
 
-.search-results__image img:hover {
+.list .auction__image img:hover {
     transform: scale(1.05);
 }
 
-.search-results__info-wrapper,
-.search-results__price-wrapper {
+.list .auction__info-wrapper,
+.list .auction__price-wrapper {
     padding: 20px 30px;
 }
 
-.search-results__info-wrapper {
+.list .auction__info-wrapper {
     border-top: 2px solid var(--light-grey);
     border-right: 2px solid var(--light-grey);
     border-bottom: 2px solid var(--light-grey);
@@ -860,26 +863,26 @@ footer .button--outlined:hover {
     height: 70%;
 }
 
-.search-results__info-wrapper h3 {
+.list .auction__info-wrapper h3 {
     transition: all 0.2s ease;
 }
 
-.search-results__info-wrapper h3:hover {
+.list .auction__info-wrapper h3:hover {
     color: var(--secondary-blue);
 }
 
-.search-results__price-wrapper {
+.list .auction__price-wrapper {
     border-right: 2px solid var(--light-grey);
     border-bottom: 2px solid var(--light-grey);
     border-bottom-right-radius: 15px;
 }
 
-.search-results__price-wrapper span {
+.list .auction__price-wrapper span {
     font-size: 22px;
     font-weight: bold;
 }
 
-.search-results__info-wrapper .auction__info-details {
+.list .auction__info-wrapper .auction__info-details {
     justify-self: end;
     justify-content: start;
     gap: 20px;
