@@ -16,19 +16,34 @@
 
 @font-face {
     font-family: Inter;
-    src: url("../fonts/Inter-Regular.otf") format("opentype");
+    src: url('../fonts/Inter-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Inter-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Inter-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Inter-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Inter-Regular.svg#Inter-Regular') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
     font-family: Inter;
     font-weight: bold;
-    src: url("../fonts/Inter-Bold.otf") format("opentype");
+    src: url('../fonts/Inter-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Inter-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Inter-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Inter-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Inter-Bold.svg#Inter-Bold') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
     font-family: Inter;
     font-weight: light;
-    src: url("../fonts/Inter-Light.otf") format("opentype");
+    src: url('../fonts/Inter-Light.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Inter-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Inter-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Inter-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Inter-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Inter-Light.svg#Inter-Light') format('svg'); /* Legacy iOS */
 }
 
 /*  ===== GLOBALS ===== */
@@ -41,11 +56,26 @@
     outline: none;
 }
 
+html {
+    overflow-x: hidden;
+    position: relative;
+}
+
 body {
     background-color: var(--white);
     text-rendering: optimizeLegibility;
     margin: 0;
     min-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
 }
 
 a {
@@ -448,11 +478,13 @@ footer .button--outlined:hover {
     width: 49.5%;
     margin-bottom: 26px;
     border: none;
+    background-color: var(--white);
 }
 
 .search-form__advanced-second-row input,
 .search-form__advanced-second-row select,
 .search-form__basic select {
+    background-color: var(--white);
     border: none;
 }
 
